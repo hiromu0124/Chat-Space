@@ -41,7 +41,7 @@ Things you may want to cover:
 |groupname|varchar(255)|null: false,unique: true|
 
 ### Association
-- has_many :users　
+- has_many :users　throuagh :groups_users
 - has_many :groups_users
 - has_many :messages
 ## groups_usersテーブル
