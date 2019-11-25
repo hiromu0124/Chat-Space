@@ -13,9 +13,9 @@
   .messages__text
     うわ
 .message
-  %input{:type=>:text,:placeholder=>"type a message",:class=>:message__form}
+  %input{type: :text,placeholder:"type a message",class: :message__form}
   %label{class: "message__icon__image"}
-    %input{:type=>:file,class:"message__image"}
+    %input{type: :file,class:"message__image"}
     =icon('fas','fas fa-image',class:"message__icon") 
   =link_to "#",class: "message__send" do
     send
