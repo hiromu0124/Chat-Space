@@ -1,0 +1,16 @@
+.side-header
+  .side-header__name
+    name
+    .side-header__menu
+  .side-header__menu__create
+  =link_to "#", class: "herder__create" do
+    =icon('fas', 'fas fa-plus-square')
+  .side-header__menu__setting
+  =link_to "#", class: "herder__setting" do
+    = icon('fas', 'far fa-cog')
+.groups
+  .group
+    .group__name
+      group
+    .group__messages
+      message
