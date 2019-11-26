@@ -10,17 +10,28 @@ $btn-color:#38aef0;
   line-height: 82px;
   padding:0px 20px 0px ;
   justify-content: flex-end;
-  float: left;
   position: fixed;
   top: 0;
+  &__menu{
+    display: flex;
+    text-align: center;
+    line-height: 82px;
+    float: right;
+    right: 0;
+    color: white;
+  }
+  &__create{
+    }
+
   &__name{
   margin-right: auto;
   color: $side-color;
   font-weight: bold;
-  float: left;
+
   }
 }
 .groups{
+  overflow: scroll;
   position: fixed;
   background-color: #2f3e51;
   width: 300px-20*2;
@@ -30,18 +41,16 @@ $btn-color:#38aef0;
 .group{
   height: 15px+5+11;
   width: 300px-20*2;
-  position: fixed;
   margin-bottom: 40px;
-    &__name{
-      font-size: 15px;
-      color: $side-color;
-      position: relative;
-    }
-    &__messages{
-      font-size: 11px;
-      color: $side-color;
-      position: absolute;
-    }
+  &__name{
+    font-size: 15px;
+    color: $side-color;
+    margin-bottom: 5px;
+  }
+  &__messages{
+    font-size: 11px;
+    color: $side-color;
+  }
   }
 }
 
@@ -50,6 +59,7 @@ $btn-color:#38aef0;
   width: calc(100% - 300px);
   position: fixed;
   top: 0;
+  padding-left: 40px;
   margin-left: 300px;
   border-bottom: solid #eeeeee;
   &__group{
