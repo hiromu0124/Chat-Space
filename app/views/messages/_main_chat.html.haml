@@ -1,21 +1,16 @@
 .main-header
   .main-header__group
-    group
-  =link_to "#",class: "main-header__edit" do
+    =@group.name
+  =link_to "edit",class: "main-header__edit" do
     Edit
-  .main-header__users
-    users
+  .main-header__users 
+    Member : 
 .messeges
-  .messages__box
-    .messages__box__user
-      user
-      2019-11-22
-  .messages__text
-    うわ
+  = render @messages
 .message
-  %input{type: :text,placeholder:"type a message",class: :message__form}
-  %label{class: "message__icon__image"}
-    %input{type: :file,class:"message__image"}
-    =icon('fas','fas fa-image',class:"message__icon") 
-  =link_to "#",class: "message__send" do
-    send
+  =form_for [@group,@message] do |f|
+    = f.text_field :content, class: 'message__form', placeholder: 'type a message'
+    =f.label :image,class: "message__icon__image" do
+      =icon('fas','fas fa-image',class:"message__icon") 
+      =f.file_field :image, class:"message__image"
+    =f.submit "Send",class: "message__send" 
