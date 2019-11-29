@@ -1,14 +1,14 @@
 .messages
   .messages__box
-  .messages__box__user
-    = message.user.name
-    .messages__box__date
-      = message.created_at.strftime("%Y/%m/%d %H:%M")
-      .messages__box__text
-      - if message.content.present?
-        %p.messages__text
-          = message.content
-          = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+    .messages__box__user
+      = message.user.name
+      .messages__box__date
+        = message.created_at.strftime("%Y/%m/%d %H:%M")
+        .messages__box__text
+        - if message.content.present?
+          %p.messages__text
+            = message.content
+            = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
 .message
   =form_for [@group,@message] do |f|
     = f.text_field :content, class: 'message__form', placeholder: 'type a message'

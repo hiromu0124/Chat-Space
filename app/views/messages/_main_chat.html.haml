@@ -3,8 +3,14 @@
     =@group.name
   =link_to "edit",class: "main-header__edit" do
     Edit
-  .main-header__users 
+  %ul.main-header__users 
     Member : 
+    %li.member
+      @user.name
+    %li.member
+      @user.name
+    %li.member
+      @user.name
 .messeges
   = render @messages
 .message
