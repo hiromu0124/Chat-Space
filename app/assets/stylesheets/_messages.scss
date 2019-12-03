@@ -87,12 +87,15 @@ $btn-color:#38aef0;
   }
 }
 .messeges{
+  overflow: scroll;
   background-color: #fafafa;
-  height: calc(100% - 82px -190px);
-  width: calc(100% - 300px - 40px);
-  margin: 62px 0px 100px 300px ;
-  padding-left: 40px;
+  height: calc(100% - 82px - 90px);
+  width: calc(100% - 300px);
+  margin: 82px 40px 100px 300px ;
+  padding: 0 40px;
+  position: fixed;
   .messages__box{
+
     padding: 46px 0 40px ;
     height: 72px;
     width: 100%;
@@ -108,7 +111,6 @@ $btn-color:#38aef0;
     }
   }
     &__text{
-      overflow: scroll;
       left: 0;
       font-size: 14px;
       color: #434a54;
@@ -132,8 +134,8 @@ $btn-color:#38aef0;
     text-align: left;
     line-height: 50px;
     padding: 0px 0px 0px 10px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    // -webkit-font-smoothing: antialiased;
+    // -moz-osx-font-smoothing: grayscale;
     position: fixed;
   }
   &__icon{
@@ -144,9 +146,24 @@ $btn-color:#38aef0;
     line-height: 60px;
     right: 165px;
   }
-  &__image{
-    display: none;
+  .new_message{
+    // .test{
+      .message__icon__image{
+        .message__form{
+          // display: none;
+          // opacity: 0;
+          visibility: hidden;
+          width: 200px;
+          height: 200px;
+        }
+      }
+    // }
   }
+  // &__form{
+  //   display: none;
+  //   width: 200px;
+  //   height: 200px;
+  // }
 
   &__send{
     position: absolute;

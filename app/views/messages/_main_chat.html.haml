@@ -3,20 +3,18 @@
     =@group.name
   =link_to "edit",class: "main-header__edit" do
     Edit
-  %ul.main-header__users 
-    Member : 
-    %li.member
-      @user.name
-    %li.member
-      @user.name
-    %li.member
-      @user.name
+  .main-header__users 
+    .member
+    Member : saas
 .messeges
   = render @messages
 .message
   =form_for [@group,@message] do |f|
-    = f.text_field :content, class: 'message__form', placeholder: 'type a message'
+    -# メッセージの文字を送信する機能
+    = f.text_field :content, class: 'message__form', placeholder: 'type a message' 
+    -# アイコンの機能
+    -# =f.file_field :image, class:"message__form"
     =f.label :image,class: "message__icon__image" do
       =icon('fas','fas fa-image',class:"message__icon") 
-      =f.file_field :image, class:"message__image"
+      =f.file_field :image, class:"message__form"
     =f.submit "Send",class: "message__send" 
