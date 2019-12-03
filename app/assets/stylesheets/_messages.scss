@@ -134,8 +134,8 @@ $btn-color:#38aef0;
     text-align: left;
     line-height: 50px;
     padding: 0px 0px 0px 10px;
-    // -webkit-font-smoothing: antialiased;
-    // -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     position: fixed;
   }
   &__icon{
@@ -147,23 +147,15 @@ $btn-color:#38aef0;
     right: 165px;
   }
   .new_message{
-    // .test{
       .message__icon__image{
         .message__form{
-          // display: none;
-          // opacity: 0;
           visibility: hidden;
           width: 200px;
           height: 200px;
         }
       }
-    // }
   }
-  // &__form{
-  //   display: none;
-  //   width: 200px;
-  //   height: 200px;
-  // }
+  
 
   &__send{
     position: absolute;
