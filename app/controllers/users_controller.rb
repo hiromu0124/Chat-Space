@@ -1,9 +1,12 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[index]
   def index
-    @user = User.find(params[:user_id])
   end
   def edit
+  end
+  def new
+    @user=User.new
+    @group.users << current_user
   end
 
   def update
@@ -17,7 +20,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email)
+    params.require(:user).permit(:name, :email,:introduce, :image)
   end
 
 end
