@@ -5,21 +5,22 @@ $(function(){
     }else{
       var str=""
     }
-        var html = `<div class="messages">
-      <div class="messages__box">
-      <div class="messages__box__user">
-      ${message.user_name}
-      <div class="messages__box__date">
-      ${message.created_at}
-      <div class="messages__box__text">
-      <div class="messages__text"></div>
-      ${message.content}
-      </div>
-      </div>
-      </div>
-      </div>
-      <img src=${str}>
-      </div>`
+        var html =
+        `<div class="messages">
+          <div class="messages__box">
+            <div class="messages__box__user">
+            ${message.user_name}
+            <div class="messages__box__date">
+            ${message.created_at}
+              <div class="messages__box__text">
+              <div class="messages__text"></div>
+              ${message.content}
+              </div>
+            </div>
+            </div>
+          </div>
+        <img src=${str}>
+        </div>`
     return html
   }
     
