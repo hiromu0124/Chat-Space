@@ -5,8 +5,7 @@ def index
   @messages=@group.messages.includes(:user)
 end
 def new
-  @user=User.new
-  @user.groups << current_user
+
 end
 def create
   @message = @group.messages.new(message_params)

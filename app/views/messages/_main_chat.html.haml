@@ -5,7 +5,9 @@
     Edit
   .main-header__users 
     .member
-    Member : saas
+      Member :
+      -@group.users.each do |user|
+        =user.name
 .messeges
   = render @messages
 .message
