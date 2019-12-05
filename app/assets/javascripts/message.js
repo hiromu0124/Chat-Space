@@ -42,10 +42,10 @@ $(function(){
       });
       $('.messages:last').append(insertHTML);
       scroll();
-      })
-    .fail(function () {
-      alert('error');
-    });
+    })
+      .fail(function () {
+        alert('error');
+      });
     };
   };
 function scroll(){
