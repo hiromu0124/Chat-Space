@@ -68,7 +68,6 @@ $(document).on("click",".user-search-add.chat-group-user__btn.chat-group-user__b
     dataType: 'json'
   })
   .done(function(users){
-    console.log(users)
     $("#user-search-result").empty();
     users.forEach(function(users) {
       var html =buildHTML(users);
@@ -81,8 +80,6 @@ $(document).on("click",".user-search-remove.chat-group-user__btn.chat-group-user
   var name=$(this).data('user-name');
   var id=$(this).data('user-id');
   $(this).parent().remove();
-  console.log(id,name)
-  console.log(this)
 $.ajax({
   type: 'GET',
   url: '/users/edit',

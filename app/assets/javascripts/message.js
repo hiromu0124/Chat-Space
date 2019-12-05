@@ -1,9 +1,9 @@
 $(function(){
   function buildHTML(message){
     if (message.image) {
-      var str=message.image
+      var image=message.image
     }else{
-      var str=""
+      var image=""
     }
         var html =
         `<div class="messages" data-message-id="${message.id}">
@@ -19,14 +19,13 @@ $(function(){
             </div>
             </div>
           </div>
-      <img src=${str}>
+      <img src=${image}>
         </div>`
     return html
   }
   var reloadMessages = function() {
       if (window.location.href.match(/\/groups\/\d+\/messages/)){
     last_message_id = $('.messages:last').data("message-id");
-    console.log(last_message_id)
     function scroll(){
       $('.messeges').animate({scrollTop: $('.messeges')[0].scrollHeight}, 'fast');
       }
