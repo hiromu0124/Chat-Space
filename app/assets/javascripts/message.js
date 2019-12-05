@@ -24,7 +24,7 @@ $(function(){
     return html
   }
   var reloadMessages = function() {
-      if (window.location.href.match(/\/groups\/\d+\/messages/)){
+    if (window.location.href.match(/\/groups\/\d+\/messages/)){
     last_message_id = $('.messages:last').data("message-id");
     function scroll(){
       $('.messeges').animate({scrollTop: $('.messeges')[0].scrollHeight}, 'fast');
@@ -35,11 +35,10 @@ $(function(){
       dataType: 'json',
       data: {id: last_message_id}
     })
-
     .done(function (messeges) { 
       var insertHTML = '';
       messeges.forEach(function (message){
-      insertHTML = buildHTML(message)
+        insertHTML = buildHTML(message)
       });
       $('.messages:last').append(insertHTML);
       scroll();
@@ -47,15 +46,13 @@ $(function(){
     .fail(function () {
       alert('error');
     });
-};
-};
-
+    };
+  };
 function scroll(){
   $('.messeges').animate({scrollTop: $('.messeges')[0].scrollHeight}, 'fast');
 }
   $("#new_message").on("submit",function(e){
     e.preventDefault();
-
     var formData = new FormData(this);
     var url =$(this).attr("action");
     $.ajax({
@@ -74,7 +71,6 @@ function scroll(){
       scroll();
       
     })
-  
     .fail(function() {
       alert("メッセージ送信に失敗しました");
       $('.message__send').prop('disabled', false);

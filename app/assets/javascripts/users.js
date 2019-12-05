@@ -36,8 +36,6 @@ $(function() {
         }else{
           nobuildHTML()
         }
-
-
     })
     .fail(function() {
       alert("ユーザー検索に失敗しました");
@@ -45,35 +43,35 @@ $(function() {
   });
 });
 $(function() {
-function  buildHTML(user){
-  var html = `
+  function  buildHTML(user){
+    var html = `
           <div class='chat-group-user'>
             <input name='group[user_ids][]' type='hidden' value='${user.id}'>
             <p class='chat-group-user__name'>${user.name}</p>
             <div class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</div>
           </div>
           `
-  $("#chat-group-users.js-add-user").append(html)
-}
-$(document).on("click",".user-search-add.chat-group-user__btn.chat-group-user__btn--add",function(e) {
-  e.preventDefault();
-  var name=$(this).data('user-name');
-  var id=$(this).data('user-id');
-  $(this).parent().remove();
-  console.log(this)
-  $.ajax({
-    type: 'GET',
-    url: '/users',
-    data: { keyword: name,id },
-    dataType: 'json'
-  })
-  .done(function(users){
-    $("#user-search-result").empty();
-    users.forEach(function(users) {
-      var html =buildHTML(users);
+    $("#chat-group-users.js-add-user").append(html)
+  }
+  $(document).on("click",".user-search-add.chat-group-user__btn.chat-group-user__btn--add",function(e) {
+    e.preventDefault();
+    var name=$(this).data('user-name');
+    var id=$(this).data('user-id');
+    $(this).parent().remove();
+    console.log(this)
+    $.ajax({
+      type: 'GET',
+      url: '/users',
+      data: { keyword: name,id },
+      dataType: 'json'
+    })
+    .done(function(users){
+      $("#user-search-result").empty();
+      users.forEach(function(users) {
+        var html =buildHTML(users);
+      });
+    });
   });
-});
-});
 });
 $(document).on("click",".user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn",function(e) {
   e.preventDefault();
@@ -86,8 +84,8 @@ $.ajax({
   data: { keyword: name,id },
   dataType: 'json'
 })
-.done(function(users){
-  console.log(users)
-  $("#user-search-result").empty();
-});
+  .done(function(users){
+    console.log(users)
+    $("#user-search-result").empty();
+  });
 });
