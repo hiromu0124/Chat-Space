@@ -85,7 +85,6 @@ $.ajax({
   dataType: 'json'
 })
   .done(function(users){
-    console.log(users)
     $("#user-search-result").empty();
   });
 });
