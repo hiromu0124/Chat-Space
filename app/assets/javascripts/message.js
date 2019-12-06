@@ -37,7 +37,7 @@ $(function(){
       messeges.forEach(function (message){
         insertHTML = buildHTML(message)
       });
-      $('.messages:last').append(insertHTML);
+      $('.messeges').append(insertHTML);
     })
       .fail(function () {
         alert('error');
