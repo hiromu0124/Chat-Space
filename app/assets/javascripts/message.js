@@ -26,9 +26,6 @@ $(function(){
   var reloadMessages = function() {
     if (window.location.href.match(/\/groups\/\d+\/messages/)){
     last_message_id = $('.messages:last').data("message-id");
-    function scroll(){
-      $('.messeges').animate({scrollTop: $('.messeges')[0].scrollHeight}, 'fast');
-      }
     $.ajax({
       url: "api/messages",
       type: 'GET',
@@ -41,7 +38,6 @@ $(function(){
         insertHTML = buildHTML(message)
       });
       $('.messages:last').append(insertHTML);
-      scroll();
     })
       .fail(function () {
         alert('error');
@@ -76,5 +72,5 @@ function scroll(){
       $('.message__send').prop('disabled', false);
   });
 });
-setInterval(reloadMessages, 1000);
+setInterval(reloadMessages, 7000);
 });
