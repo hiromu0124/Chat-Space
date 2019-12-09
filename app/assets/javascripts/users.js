@@ -58,7 +58,6 @@ $(function() {
     var name=$(this).data('user-name');
     var id=$(this).data('user-id');
     $(this).parent().remove();
-    console.log(this)
     $.ajax({
       type: 'GET',
       url: '/users',

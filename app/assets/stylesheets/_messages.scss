@@ -19,6 +19,9 @@ $btn-color:#38aef0;
     float: right;
     right: 0;
     color: white;
+    .icon{
+    color: white;
+  }
   }
   &__name{
   margin-right: auto;
@@ -64,9 +67,15 @@ $btn-color:#38aef0;
   &__group{
     font-size: 20px;
     color: #333333;
-    padding: 35px 0 12px;
+    margin: 29px 0 10px;
     font-size: 20px;
   }
+    &__users{
+      display: flex;
+      font-size: 12px;
+      color: #999999;
+      margin-bottom: 5px;
+    }
   &__edit{
   width: 35px;
   color: $btn-color;
@@ -79,12 +88,7 @@ $btn-color:#38aef0;
   border:1px solid $btn-color;
   padding: 0 20px;
   list-style: none;
-  }
-  &__users{
-    display: flex;
-    font-size: 12px;
-    color: #999999;
-  }
+  } 
 }
 .messeges{
   overflow: scroll;
