@@ -19,6 +19,9 @@ $btn-color:#38aef0;
     float: right;
     right: 0;
     color: white;
+    &__create{
+      margin-right:5px;
+    }
     .icon{
     color: white;
   }
@@ -90,6 +93,7 @@ $btn-color:#38aef0;
   list-style: none;
   } 
 }
+
 .messeges{
   overflow: scroll;
   background-color: #fafafa;
@@ -107,16 +111,19 @@ $btn-color:#38aef0;
       color: #434a54;
       margin-bottom:10px ;
     display: flex;
-    &__data{
+    }
+    &__date{
       padding-left: 10px;
-      font-size: 12px;
+      font-size: 15px;
       color: #999999;
     }
-  }
+  
     &__text{
       left: 0;
       font-size: 14px;
       color: #434a54;
+      display: block;
+    
     }
   } 
 }
