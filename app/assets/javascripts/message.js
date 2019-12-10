@@ -12,12 +12,12 @@ $(function(){
             ${message.user_name}
             <div class="messages__box__date">
             ${message.created_at}
+            </div>
+              </div>
               <div class="messages__box__text">
               <div class="messages__text"></div>
               ${message.content}
               </div>
-            </div>
-            </div>
           </div>
       <img src=${image}>
         </div>`
